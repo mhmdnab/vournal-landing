@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/**
+ * Direction A — "Quiet".
+ *
+ * Paper and ink, hairline borders, no shadows, no gradients. The serif carries
+ * the user's own words; the sans carries chrome and meta. Restraint is the
+ * point — if something here starts shouting, it's wrong.
+ *
+ * This is a light, paper-toned surface by design, so there is no dark-mode
+ * variant: the palette *is* the product.
+ */
+:root {
+  --paper: #faf8f3;
+  --ink: #2b2926;
+  --secondary: #6b6558;
+  --muted: #9a9384;
+  --faint: #b0a995;
+  --hairline: #eae3d6;
+
+  /* The one accent — a slate-green, the same hue as the top of the mood scale.
+     Used sparingly for "now" affordances (today, a checked task). */
+  --accent: #5e8c6a;
+
+  /* Muted 1–5 mood scale. Mirrors src/lib/mood.ts — keep the two in step. */
+  --mood-1: #b5553c;
+  --mood-2: #c08a5a;
+  --mood-3: #9a9384;
+  --mood-4: #7e9a6e;
+  --mood-5: #5e8c6a;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+
+  --color-mood-1: var(--mood-1);
+  --color-mood-2: var(--mood-2);
+  --color-mood-3: var(--mood-3);
+  --color-mood-4: var(--mood-4);
+  --color-mood-5: var(--mood-5);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+
+  --radius-card: 14px;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+/* Hairlines, not shadows. A visible focus ring is the one place we allow
+   ourselves a bit of contrast — quiet shouldn't mean unusable. */
+:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--hairline);
+  color: var(--ink);
+}
