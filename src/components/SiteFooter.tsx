@@ -35,7 +35,7 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto w-full max-w-5xl px-6 pb-10">
         <p className="text-faint text-xs">
-          © {new Date().getFullYear()} vournal. iOS. Made for the way you talk.
+          {new Date().getFullYear()} vournal. iOS. Made for the way you talk.
         </p>
       </div>
     </footer>

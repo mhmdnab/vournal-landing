@@ -1,7 +1,11 @@
+import Image from "next/image";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DownloadButton } from "@/components/DownloadButton";
 import { CONTACT_EMAIL } from "@/lib/site";
+
+const MOCKUP_ALT =
+  "vournal on an iPhone — the capture screen “What’s on your mind?”, tap to start, with Home, Journal, To-Do, Calendar and Profile in the bottom nav";
 
 /**
  * The marketing landing page (Step 13). One fast, static, server-rendered page
@@ -32,8 +36,8 @@ export default function LandingPage() {
 
 function Hero() {
   return (
-    <section className="mx-auto grid w-full max-w-5xl grid-cols-1 items-center gap-12 px-6 pt-10 pb-20 md:grid-cols-[1.1fr_0.9fr] md:pt-16 md:pb-28">
-      <div>
+    <section className="mx-auto grid w-full max-w-5xl grid-cols-1 items-center gap-12 px-6 pt-10 pb-20 md:grid-cols-[0.9fr_1.1fr] md:pt-16 md:pb-28">
+      <div className="md:order-2">
         <p className="text-muted text-xs tracking-[0.14em] uppercase">
           A voice journal that organizes itself
         </p>
@@ -51,59 +55,18 @@ function Hero() {
         </div>
       </div>
 
-      <div className="flex justify-center md:justify-end">
-        <PhoneMockup />
+      <div className="flex justify-center md:order-1 md:justify-center">
+        <Image
+          src="/phone-mockup.png"
+          alt={MOCKUP_ALT}
+          width={1044}
+          height={1966}
+          priority
+          sizes="(max-width: 768px) 320px, 350px"
+          className="h-auto w-[320px] sm:w-[350px]"
+        />
       </div>
     </section>
-  );
-}
-
-/* A quiet, on-brand app preview — stands in for a real screenshot (Phase 2). */
-function PhoneMockup() {
-  return (
-    <div className="border-hairline w-[250px] rounded-[2.3rem] border bg-[#f3f0e8] p-2.5">
-      <div className="bg-paper overflow-hidden rounded-[1.9rem] px-4 py-5">
-        <p className="text-faint text-[10px] tracking-[0.12em] uppercase">
-          Tuesday · Journal
-        </p>
-
-        {/* two entry rows */}
-        {[
-          { c: "bg-mood-5", w: ["82%", "54%"] },
-          { c: "bg-mood-2", w: ["70%", "40%"] },
-        ].map((row, i) => (
-          <div key={i} className="border-hairline flex items-start gap-2.5 border-b py-3.5">
-            <span className={`mt-1 block h-2 w-2 shrink-0 rounded-full ${row.c}`} />
-            <span className="flex-1">
-              <span className="bg-hairline block h-2.5 rounded" style={{ width: row.w[0] }} />
-              <span className="bg-hairline mt-1.5 block h-2 rounded opacity-70" style={{ width: row.w[1] }} />
-            </span>
-          </div>
-        ))}
-
-        {/* a pulled-out to-do */}
-        <p className="text-faint mt-4 text-[9px] tracking-[0.12em] uppercase">To-do</p>
-        <div className="mt-2 flex items-center gap-2.5">
-          <span className="border-faint block h-3.5 w-3.5 shrink-0 rounded-[3px] border" />
-          <span className="bg-hairline block h-2.5 w-[64%] rounded" />
-        </div>
-        <div className="mt-2.5 flex items-center gap-2.5">
-          <span className="bg-accent flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-[3px]">
-            <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-              <path d="M1.5 5.2 3.8 7.5 8.5 2.5" stroke="#FAF8F3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-          <span className="bg-hairline block h-2.5 w-[48%] rounded opacity-60" />
-        </div>
-
-        {/* a calendar chip */}
-        <p className="text-faint mt-4 text-[9px] tracking-[0.12em] uppercase">Tomorrow</p>
-        <div className="border-hairline mt-2 flex items-center gap-2.5 rounded-lg border px-2.5 py-2">
-          <span className="text-accent text-[10px] tabular-nums">2:00</span>
-          <span className="bg-hairline block h-2.5 w-[52%] rounded" />
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -240,12 +203,6 @@ function ScreenshotBand() {
           One recording, three views — the journal you’ll keep, the to-dos you’ll
           finish, the plan you’ll follow.
         </p>
-        <div className="mt-14 flex flex-wrap items-end justify-center gap-8">
-          <PhoneMockup />
-          <div className="hidden sm:block">
-            <PhoneMockup />
-          </div>
-        </div>
       </div>
     </section>
   );
