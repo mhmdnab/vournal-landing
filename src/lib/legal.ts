@@ -26,7 +26,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "25 July 2026",
+  updated: "1 August 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -84,7 +84,8 @@ export const PRIVACY_POLICY: LegalDoc = {
         rows: [
           ["Speechmatics (Melia)", "Your audio recording", "Converting speech to text"],
           ["Anthropic (Claude)", "Your transcript text", "Correcting transcription errors and extracting tasks, mood, topics, and people"],
-          ["Supabase (database + audio storage) and Render (backend hosting)", "Recordings, transcripts, account data", "Hosting and storage"],
+          ["Render (backend + PostgreSQL database)", "Account data, transcripts, and everything derived from your entries", "Hosting and database storage"],
+          ["Cloudflare (R2 storage)", "Your audio recordings", "Storing audio files in a private bucket"],
         ],
       },
     },
