@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DownloadButton } from "@/components/DownloadButton";
+import { FaqItem } from "@/components/FaqItem";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 const MOCKUP_ALT =
@@ -345,17 +346,7 @@ function Faq() {
         <h2 className="font-serif text-ink text-3xl tracking-tight">Questions</h2>
         <div className="mt-10 divide-y divide-[color:var(--hairline)]">
           {qs.map((item) => (
-            <details key={item.q} className="group py-5">
-              <summary className="text-ink flex cursor-pointer list-none items-center justify-between text-[16px]">
-                {item.q}
-                <span className="text-faint ml-4 transition-transform group-open:rotate-45">
-                  +
-                </span>
-              </summary>
-              <p className="text-secondary mt-3 text-[15px] leading-relaxed">
-                {item.a}
-              </p>
-            </details>
+            <FaqItem key={item.q} q={item.q} a={item.a} />
           ))}
         </div>
         <p className="text-muted mt-8 text-sm">
