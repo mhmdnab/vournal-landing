@@ -26,7 +26,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "1 August 2026",
+  updated: "29 September 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -38,7 +38,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     },
     {
       p: [
-        "Please read section 3 carefully — it explains that your voice recordings and journal text are sent to third-party providers in order to transcribe and organise them.",
+        "Please read section 3 carefully — it explains that your voice recordings and journal text are sent to third-party providers, including AI services, in order to transcribe and organise them. The app asks for your permission before it sends anything to them.",
       ],
     },
     { hr: true },
@@ -47,7 +47,9 @@ export const PRIVACY_POLICY: LegalDoc = {
     {
       ul: [
         ["You speak; we record, transcribe, and organise what you said."],
-        ["To do that, your audio and transcripts are sent to specialist providers (listed in section 3). They process it on our behalf."],
+        ["To do that, your audio and transcripts are sent to specialist providers, including AI services (listed in section 3). They process it on our behalf."],
+        ["The app asks for your permission before it first sends a recording or entry to those providers. You can withdraw it at any time in Profile."],
+        ["If you choose to link a person in your journal to a contact on your phone, that contact is read on your device only. Your contacts are never uploaded."],
         ["We do ", { b: "not" }, " sell your data, use it for advertising, or read your journals except in the narrow cases described in section 6."],
         ["You can delete any recording, any entry, or your entire account at any time."],
       ],
@@ -67,14 +69,23 @@ export const PRIVACY_POLICY: LegalDoc = {
       ul: [
         ["Audio recordings you make in the app"],
         ["The text transcript of those recordings"],
-        ["Information automatically derived from your entries, including: a short summary, an estimated mood rating and mood-related words, tasks and their dates and times, recurring topics, and names of people you mention"],
+        ["Information automatically derived from your entries, including: a short summary, an estimated mood rating and mood-related words, tasks and their dates and times, recurring topics, places, and names of people you mention"],
       ],
     },
     { p: [{ b: "Technical information" }] },
     {
       ul: [["Basic operational logs needed to run and secure the service (for example, request timestamps and error records)"]],
     },
-    { p: ["We do not collect contacts, location, advertising identifiers, or your device's microphone input outside of recordings you explicitly start."] },
+    { p: [{ b: "Contacts on your device (optional)" }] },
+    { p: ["You can link a person in your journal to a contact on your phone. If you choose to, the app asks for access to your contacts and reads the name, phone numbers, and email addresses of the contact you pick, so it can show them to you."] },
+    {
+      ul: [
+        ["This happens on your device. Your contacts are ", { b: "not" }, " uploaded to our servers and are not sent to any third party."],
+        ["The link between a person and a contact is stored only on your device. It is removed when you unlink the contact or delete your account."],
+        ["Access is optional. The rest of the app works without it, and you can turn it off at any time in your device settings."],
+      ],
+    },
+    { p: ["We do not collect your location or advertising identifiers, we do not store your contacts on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
 
     { h: "3. Third parties who process your data" },
     { p: ["To turn speech into organised text, we send your data to the following providers. They act as processors on our behalf and are contractually limited to providing their service to us."] },
@@ -83,14 +94,16 @@ export const PRIVACY_POLICY: LegalDoc = {
         head: ["Provider", "What is sent", "Purpose"],
         rows: [
           ["Speechmatics (Melia)", "Your audio recording", "Converting speech to text"],
-          ["Anthropic (Claude)", "Your transcript text", "Correcting transcription errors and extracting tasks, mood, topics, and people"],
+          ["Anthropic (Claude)", "Your transcript text", "Correcting transcription errors and extracting tasks, mood, topics, places, and people"],
           ["Render (backend + PostgreSQL database)", "Account data, transcripts, and everything derived from your entries", "Hosting and database storage"],
           ["Cloudflare (R2 storage)", "Your audio recordings", "Storing audio files in a private bucket"],
+          ["Resend (email delivery)", "Your email address and the message we send you", "Sending password-reset emails"],
         ],
       },
     },
     { p: [{ b: "This means your voice recordings and journal text leave your device." }, " They are transmitted over encrypted connections and processed to produce your transcript and its structure."] },
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
+    { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
 
     { h: "4. Sensitive content" },
     { p: ["A voice journal is unusually personal, and two categories deserve specific mention:"] },
@@ -103,7 +116,7 @@ export const PRIVACY_POLICY: LegalDoc = {
       ul: [
         [{ b: "Performance of a contract" }, " — to provide the service you signed up for"],
         [{ b: "Legitimate interests" }, " — to keep the service secure, prevent abuse, and fix faults"],
-        [{ b: "Consent" }, " — where you have given it, and which you may withdraw at any time"],
+        [{ b: "Consent" }, " — where you have given it, such as the permission to send your content to the AI providers in section 3 and the permission to read a contact you choose to link. You may withdraw either at any time"],
         [{ b: "Legal obligation" }, " — where we are required to retain or disclose information"],
       ],
     },
@@ -124,6 +137,8 @@ export const PRIVACY_POLICY: LegalDoc = {
         [{ b: "Delete a recording" }, " — removes the audio file while keeping the written entry."],
         [{ b: "Delete an entry" }, " — removes the entry, its recording, and the tasks derived from it."],
         [{ b: "Delete your account" }, " — removes your account and associated content."],
+        [{ b: "Withdraw AI permission" }, " — in Profile. Stops new recordings and entries being sent to the AI providers. It does not delete entries you already have."],
+        [{ b: "Unlink a contact" }, " — removes the link from your device. Your contact itself is never changed."],
       ],
     },
     { p: ["Deletions are actioned promptly. Copies may persist briefly in encrypted backups before being overwritten in the ordinary course of operations. Transient copies held by processors are deleted according to their retention practices."] },
@@ -160,13 +175,13 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "25 July 2026",
+  updated: "29 September 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, operated by Mohammad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
 
     { h: "1. What vournal is" },
-    { p: ["vournal is a voice journal. You speak; the app records you, converts your speech to text, and automatically organises it into a journal entry, tasks, and calendar items, along with an estimated mood and recurring topics."] },
+    { p: ["vournal is a voice journal. You speak; the app records you, converts your speech to text, and automatically organises it into a journal entry, tasks, and calendar items, along with an estimated mood and the topics, places, and people that recur. You can optionally link a person in your journal to a contact on your phone."] },
     { p: ["How your data is handled is described in our Privacy Policy, which forms part of these terms."] },
 
     { h: "2. Eligibility" },
@@ -228,7 +243,23 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     { h: "15. Changes to these terms" },
     { p: ["We may update these terms. If changes are material, we will notify you in the app or by email before they take effect. Continuing to use vournal after that means you accept the updated terms."] },
 
-    { h: "16. Contact" },
-    { p: [{ b: EMAIL }] },
+    { h: "16. If you got vournal from the Apple App Store" },
+    { p: ["These additional terms apply to the iOS app. Where they conflict with anything above, these terms apply."] },
+    {
+      ul: [
+        [{ b: "Who the agreement is with." }, " These terms are between you and us only, not Apple. We, not Apple, are solely responsible for vournal and its content."],
+        [{ b: "Your licence." }, " We grant you a non-transferable licence to use vournal on Apple devices that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions."],
+        [{ b: "Maintenance and support." }, " We are solely responsible for maintaining and supporting vournal. Apple has no obligation to provide any maintenance or support for it."],
+        [{ b: "Warranty." }, " To the extent any warranty applies and vournal fails to conform to it, you may notify Apple, and Apple will refund the purchase price, if any, that you paid for the app. To the maximum extent permitted by law, Apple has no other warranty obligation for vournal."],
+        [{ b: "Claims." }, " We, not Apple, are responsible for addressing any claims by you or a third party relating to vournal or your use of it, including product-liability claims, claims that vournal fails to meet a legal or regulatory requirement, and claims under consumer-protection, privacy, or similar law."],
+        [{ b: "Intellectual property." }, " If a third party claims that vournal or your use of it infringes their intellectual-property rights, we, not Apple, are responsible for investigating, defending, settling, and discharging that claim."],
+        [{ b: "Legal compliance." }, " You confirm that you are not located in a country subject to a United States Government embargo or designated by it as a terrorist-supporting country, and that you are not on any United States Government list of prohibited or restricted parties."],
+        [{ b: "Third-party terms." }, " You must comply with any third-party terms that apply to you when using vournal, such as your mobile carrier's."],
+        [{ b: "Apple as a beneficiary." }, " Apple and its subsidiaries are third-party beneficiaries of these terms. Once you accept them, Apple has the right to enforce these terms against you as a third-party beneficiary."],
+      ],
+    },
+
+    { h: "17. Contact" },
+    { p: ["Mohammad El Naboulsi, Tripoli, Lebanon. ", { b: EMAIL }] },
   ],
 };

@@ -25,6 +25,12 @@ export function SiteFooter() {
           >
             Terms
           </Link>
+          <Link
+            href="/support"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            Support
+          </Link>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="text-secondary hover:text-ink transition-colors"
