@@ -26,7 +26,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "29 September 2026",
+  updated: "3 October 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -183,13 +183,13 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "29 September 2026",
+  updated: "3 October 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, operated by Mohammad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
 
     { h: "1. What vournal is" },
-    { p: ["vournal is a voice journal. You speak; the app records you, converts your speech to text, and automatically organises it into a journal entry, tasks, and calendar items, along with an estimated mood and the topics, places, and people that recur. You can optionally link a person in your journal to a contact on your phone."] },
+    { p: ["vournal is a voice journal. You speak; the app records you, converts your speech to text, and automatically organises it into a journal entry, tasks, and calendar items, along with an estimated mood and the topics, places, and people that recur. You can optionally link a person in your journal to a contact on your phone, have vournal copy your tasks and appointments into Apple Reminders and Apple Calendar, and share an entry to other apps."] },
     { p: ["How your data is handled is described in our Privacy Policy, which forms part of these terms."] },
 
     { h: "2. Eligibility" },
@@ -206,6 +206,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     { p: [{ b: "Automated transcription and organisation are imperfect, and vournal may get things wrong." }] },
     { p: ["Specifically, the app may mishear words, transcribe the wrong thing, assign the wrong date or time to a task, miss a task you mentioned, or create one you did not intend. This is more likely with background noise, accents, dialects, and speech that mixes languages."] },
     { p: [{ b: "Do not rely on vournal as your only record of anything important." }, " It is a journaling aid, not a system of record. You are responsible for verifying anything that matters — appointments, deadlines, medication schedules, commitments to other people. We are not liable for anything missed, mistimed, or misrecorded."] },
+    { p: ["If you turn on copying to Apple Reminders or Apple Calendar, the copies reflect what vournal extracted, with the same possibility of error, and they follow changes made in vournal, not the other way round. Check them as you would check vournal itself."] },
 
     { h: "6. Mood features are not health care" },
     { p: ["vournal estimates a mood rating and emotion words from your entries and shows trends over time. These are automated impressions of your own words, offered for personal reflection."] },
