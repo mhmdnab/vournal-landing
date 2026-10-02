@@ -85,7 +85,15 @@ export const PRIVACY_POLICY: LegalDoc = {
         ["Access is optional. The rest of the app works without it, and you can turn it off at any time in your device settings."],
       ],
     },
-    { p: ["We do not collect your location or advertising identifiers, we do not store your contacts on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
+    { p: [{ b: "Calendar and Reminders on your device (optional)" }] },
+    { p: ["You can ask vournal to copy the tasks and appointments it extracts into Apple Reminders and Apple Calendar. If you turn this on, the app asks for access, creates a list and a calendar named \"vournal\", and keeps the copies up to date as you tick or delete tasks in the app."] },
+    {
+      ul: [
+        ["This happens on your device. Nothing from your calendars or reminders is read into vournal or uploaded to our servers."],
+        ["You can turn it off at any time in Profile, and remove everything vournal added with one tap."],
+      ],
+    },
+    { p: ["We do not collect your location or advertising identifiers, we do not store your contacts, calendars, or reminders on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
 
     { h: "3. Third parties who process your data" },
     { p: ["To turn speech into organised text, we send your data to the following providers. They act as processors on our behalf and are contractually limited to providing their service to us."] },
