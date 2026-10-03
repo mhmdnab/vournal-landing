@@ -5,9 +5,9 @@
 /** The marketing domain — used for absolute Open Graph / canonical URLs. */
 export const SITE_URL = "https://vournal.app";
 
-/** App Store / TestFlight link for every download CTA. PLACEHOLDER — replace
- *  with the real link when it's ready. */
-export const APP_STORE_URL = "#"; // TODO: real App Store / TestFlight URL
+/** Where every download button goes. The public TestFlight invitation for now;
+ *  swap in the App Store link at launch. */
+export const APP_STORE_URL = "https://testflight.apple.com/join/Uff1cmGA";
 
 /** Shown on every download button. Flip to "Download on the App Store" at launch. */
 export const CTA_LABEL = "Join the TestFlight beta";
