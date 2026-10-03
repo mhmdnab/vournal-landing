@@ -2,7 +2,7 @@ import { APP_STORE_URL, CTA_LABEL } from "@/lib/site";
 
 /**
  * The one call to action, used in the header, hero, and bottom band. Points at
- * APP_STORE_URL (a placeholder until the real TestFlight/App Store link lands).
+ * APP_STORE_URL: the public TestFlight invitation until launch.
  */
 export function DownloadButton({
   variant = "primary",
