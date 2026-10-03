@@ -31,7 +31,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
       p: [
-        'vournal ("we", "us") is operated by Mohammad El Naboulsi, based in Tripoli, Lebanon. Contact: ',
+        'vournal ("we", "us") is operated by Mohamad El Naboulsi, based in Tripoli, Lebanon. Contact: ',
         { b: EMAIL },
         ".",
       ],
@@ -185,7 +185,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
   updated: "3 October 2026",
   blocks: [
-    { p: ['These terms govern your use of vournal, operated by Mohammad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
+    { p: ['These terms govern your use of vournal, operated by Mohamad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
 
     { h: "1. What vournal is" },
@@ -269,6 +269,6 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     },
 
     { h: "17. Contact" },
-    { p: ["Mohammad El Naboulsi, Tripoli, Lebanon. ", { b: EMAIL }] },
+    { p: ["Mohamad El Naboulsi, Tripoli, Lebanon. ", { b: EMAIL }] },
   ],
 };
