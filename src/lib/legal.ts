@@ -26,7 +26,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "3 October 2026",
+  updated: "29 October 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -72,6 +72,14 @@ export const PRIVACY_POLICY: LegalDoc = {
         ["Information automatically derived from your entries, including: a short summary, an estimated mood rating and mood-related words, tasks and their dates and times, recurring topics, places, and names of people you mention"],
       ],
     },
+    { p: [{ b: "Purchases (if you subscribe to vournal Plus)" }] },
+    {
+      ul: [
+        ["Your plan and the date it renews or ends"],
+        ["The identifiers that link a purchase to your account: Apple's original transaction id for purchases in the app, or Paddle's subscription id for purchases on our website"],
+        ["We never receive your card or bank details. Apple and Paddle handle payment."],
+      ],
+    },
     { p: [{ b: "Technical information" }] },
     {
       ul: [["Basic operational logs needed to run and secure the service (for example, request timestamps and error records)"]],
@@ -93,7 +101,7 @@ export const PRIVACY_POLICY: LegalDoc = {
         ["You can turn it off at any time in Profile, and remove everything vournal added with one tap."],
       ],
     },
-    { p: ["We do not collect your location or advertising identifiers, we do not store your contacts, calendars, or reminders on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
+    { p: ["We do not track your location or collect advertising identifiers. If you pin a place to a task, we store the place name and the map coordinates you chose; searching for a place sends your search text from your device to Apple's map service. We do not store your contacts, calendars, or reminders on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
 
     { h: "3. Third parties who process your data" },
     { p: ["To turn speech into organised text, we send your data to the following providers. They act as processors on our behalf and are contractually limited to providing their service to us."] },
@@ -109,6 +117,7 @@ export const PRIVACY_POLICY: LegalDoc = {
         ],
       },
     },
+    { p: [{ b: "Payments." }, " If you subscribe in the app, Apple sells the subscription and processes payment under Apple's terms; Apple tells us the purchase's transaction details so we can turn Plus on, renew it and end it. If you subscribe on our website, Paddle (paddle.com) is the reseller and merchant of record: it receives your email address and the payment details you enter at checkout, and tells us the subscription's status. Both act under their own privacy policies."] },
     { p: [{ b: "This means your voice recordings and journal text leave your device." }, " They are transmitted over encrypted connections and processed to produce your transcript and its structure."] },
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
     { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
@@ -183,7 +192,7 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "3 October 2026",
+  updated: "29 October 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, operated by Mohamad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
@@ -227,7 +236,15 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     },
 
     { h: "8. Free and paid access" },
-    { p: ["Free accounts may be subject to usage limits, which we may change. If we introduce paid plans, pricing and billing terms will be presented to you before you subscribe, and purchases made through the Apple App Store are additionally governed by Apple's terms, with payment, renewal, and refunds handled by Apple."] },
+    { p: ["Free accounts have usage limits (entries per month and recording length), which we may change. vournal Plus is an optional monthly subscription that raises those limits. Its price is shown before you buy."] },
+    {
+      ul: [
+        [{ b: "In the app:" }, " vournal Plus is sold through Apple In-App Purchase and charged to your Apple Account when you confirm. It renews automatically each month unless you cancel at least 24 hours before the end of the current period; your account is charged for the next month within 24 hours before it ends. You can manage or cancel it in your Apple Account settings. Refunds are handled by Apple under Apple's terms."],
+        [{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the receipt or account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."],
+        ["When you cancel, Plus stays active until the end of the period you paid for, then your account returns to the free limits. Nothing in your journal is deleted."],
+        ["If we change the price, we will tell you before the new price applies, and you can cancel before it does."],
+      ],
+    },
 
     { h: "9. Availability and changes" },
     { p: ["We aim to keep vournal running well, but we do not guarantee uninterrupted or error-free service. We may change, suspend, or discontinue features. If we plan to discontinue the service entirely, we will give you reasonable notice and an opportunity to export your data."] },
