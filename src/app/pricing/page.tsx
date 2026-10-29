@@ -22,7 +22,7 @@ const PLANS: { name: string; price: string; features: string[] }[] = [
   },
   {
     name: "Plus",
-    price: "$5 / month",
+    price: "$4.99 / month",
     features: ["150 entries a month", "Recordings up to 5 minutes", "Everything in Free"],
   },
 ];
