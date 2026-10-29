@@ -7,8 +7,14 @@
 
 import { initializePaddle, type Environments, type Paddle } from "@paddle/paddle-js";
 
-export const PADDLE_ENV: Environments =
-  process.env.NEXT_PUBLIC_PADDLE_ENV === "production" ? "production" : "sandbox";
+/** Must be set explicitly: an unset value disables checkout instead of silently
+ *  falling back to the sandbox (whose purchases must never reach production). */
+export const PADDLE_ENV: Environments | null =
+  process.env.NEXT_PUBLIC_PADDLE_ENV === "production"
+    ? "production"
+    : process.env.NEXT_PUBLIC_PADDLE_ENV === "sandbox"
+      ? "sandbox"
+      : null;
 
 export const PADDLE_CLIENT_TOKEN = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN ?? "";
 
@@ -16,7 +22,7 @@ export const PADDLE_CLIENT_TOKEN = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN ?
 export const PLUS_PRICE_ID = process.env.NEXT_PUBLIC_PADDLE_PRICE_ID ?? "";
 
 /** True when both public values are set, so the checkout can open at all. */
-export const PADDLE_CONFIGURED = Boolean(PADDLE_CLIENT_TOKEN && PLUS_PRICE_ID);
+export const PADDLE_CONFIGURED = Boolean(PADDLE_ENV && PADDLE_CLIENT_TOKEN && PLUS_PRICE_ID);
 
 let paddlePromise: Promise<Paddle | undefined> | null = null;
 
@@ -24,7 +30,7 @@ let paddlePromise: Promise<Paddle | undefined> | null = null;
 export function getPaddle(): Promise<Paddle | undefined> {
   if (!PADDLE_CONFIGURED) return Promise.resolve(undefined);
   paddlePromise ??= initializePaddle({
-    environment: PADDLE_ENV,
+    environment: PADDLE_ENV ?? "sandbox",
     token: PADDLE_CLIENT_TOKEN,
   });
   return paddlePromise;

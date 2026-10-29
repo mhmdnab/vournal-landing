@@ -14,7 +14,20 @@ export type Block =
   | { p: Span[] } // paragraph
   | { ul: Span[][] } // bullet list (each item is a span array)
   | { table: { head: string[]; rows: string[][] } }
-  | { hr: true };
+  | { hr: true }
+  // Shown on the website only. The iOS app never mentions buying outside the
+  // App Store (App Store guideline 3.1.1), so it renders forApp(blocks).
+  | { webOnly: Block[] };
+
+/** The blocks the iOS app shows: everything except the website-only parts. */
+export function forApp(blocks: Block[]): Block[] {
+  return blocks.filter((block) => !("webOnly" in block));
+}
+
+/** The blocks the website shows: everything, website-only parts inlined. */
+export function forWeb(blocks: Block[]): Block[] {
+  return blocks.flatMap((block) => ("webOnly" in block ? forWeb(block.webOnly) : [block]));
+}
 
 export interface LegalDoc {
   title: string;
@@ -76,8 +89,8 @@ export const PRIVACY_POLICY: LegalDoc = {
     {
       ul: [
         ["Your plan and the date it renews or ends"],
-        ["The identifiers that link a purchase to your account: Apple's original transaction id for purchases in the app, or Paddle's subscription id for purchases on our website"],
-        ["We never receive your card or bank details. Apple and Paddle handle payment."],
+        ["The identifiers that link a purchase to your account, such as Apple's original transaction id"],
+        ["We never receive your card or bank details. The store you buy from handles payment."],
       ],
     },
     { p: [{ b: "Technical information" }] },
@@ -117,7 +130,8 @@ export const PRIVACY_POLICY: LegalDoc = {
         ],
       },
     },
-    { p: [{ b: "Payments." }, " If you subscribe in the app, Apple sells the subscription and processes payment under Apple's terms; Apple tells us the purchase's transaction details so we can turn Plus on, renew it and end it. If you subscribe on our website, Paddle (paddle.com) is the reseller and merchant of record: it receives your email address and the payment details you enter at checkout, and tells us the subscription's status. Both act under their own privacy policies."] },
+    { p: [{ b: "Payments." }, " If you subscribe in the app, Apple sells the subscription and processes payment under Apple's terms; Apple tells us the purchase's transaction details so we can turn Plus on, renew it and end it. Apple acts under its own privacy policy."] },
+    { webOnly: [{ p: ["If you subscribe on our website, Paddle (paddle.com) is the reseller and merchant of record: it receives your email address and the payment details you enter at checkout, and tells us the subscription's status, including Paddle's subscription id, which we keep. Paddle acts under its own privacy policy."] }] },
     { p: [{ b: "This means your voice recordings and journal text leave your device." }, " They are transmitted over encrypted connections and processed to produce your transcript and its structure."] },
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
     { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
@@ -240,11 +254,12 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     {
       ul: [
         [{ b: "In the app:" }, " vournal Plus is sold through Apple In-App Purchase and charged to your Apple Account when you confirm. It renews automatically each month unless you cancel at least 24 hours before the end of the current period; your account is charged for the next month within 24 hours before it ends. You can manage or cancel it in your Apple Account settings. Refunds are handled by Apple under Apple's terms."],
-        [{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the receipt or account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."],
         ["When you cancel, Plus stays active until the end of the period you paid for, then your account returns to the free limits. Nothing in your journal is deleted."],
         ["If we change the price, we will tell you before the new price applies, and you can cancel before it does."],
+        ["If you bought vournal Plus somewhere other than the app, the seller's terms apply to that purchase."],
       ],
     },
+    { webOnly: [{ ul: [[{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the receipt or account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."]] }] },
 
     { h: "9. Availability and changes" },
     { p: ["We aim to keep vournal running well, but we do not guarantee uninterrupted or error-free service. We may change, suspend, or discontinue features. If we plan to discontinue the service entirely, we will give you reasonable notice and an opportunity to export your data."] },

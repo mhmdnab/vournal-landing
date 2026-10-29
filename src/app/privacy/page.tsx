@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalLayout } from "@/components/LegalLayout";
 import { LegalDoc } from "@/components/LegalDoc";
-import { PRIVACY_POLICY } from "@/lib/legal";
+import { PRIVACY_POLICY, forWeb } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — vournal",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <LegalLayout title={PRIVACY_POLICY.title} updated={PRIVACY_POLICY.updated}>
-      <LegalDoc blocks={PRIVACY_POLICY.blocks} />
+      <LegalDoc blocks={forWeb(PRIVACY_POLICY.blocks)} />
     </LegalLayout>
   );
 }
