@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CONTACT_EMAIL } from "@/lib/site";
 
-/** Quiet footer — wordmark, the App-Store-required legal links, contact. */
+/** Quiet footer — wordmark, pricing, the App-Store-required legal links, contact. */
 export function SiteFooter() {
   return (
     <footer className="border-hairline mt-24 border-t">
@@ -14,6 +14,12 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <Link
+            href="/pricing"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
             href="/privacy"
             className="text-secondary hover:text-ink transition-colors"
           >
@@ -24,6 +30,12 @@ export function SiteFooter() {
             className="text-secondary hover:text-ink transition-colors"
           >
             Terms
+          </Link>
+          <Link
+            href="/refunds"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            Refunds
           </Link>
           <Link
             href="/support"

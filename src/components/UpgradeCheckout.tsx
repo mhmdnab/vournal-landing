@@ -72,10 +72,7 @@ export function UpgradeCheckout() {
 
   if (!PADDLE_CONFIGURED) {
     return (
-      <p className="text-muted text-sm">
-        Checkout isn’t configured. Set NEXT_PUBLIC_PADDLE_ENV,
-        NEXT_PUBLIC_PADDLE_CLIENT_TOKEN and NEXT_PUBLIC_PADDLE_PRICE_ID.
-      </p>
+      <p className="text-muted text-sm">Checkout isn’t available right now. Please check back soon.</p>
     );
   }
 

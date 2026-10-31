@@ -21,6 +21,9 @@ export const PADDLE_CLIENT_TOKEN = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN ?
 /** The single paid plan (Plus, monthly). */
 export const PLUS_PRICE_ID = process.env.NEXT_PUBLIC_PADDLE_PRICE_ID ?? "";
 
+/** Paddle's customer portal (update card, invoices, cancel). Sandbox and live differ. */
+export const PADDLE_PORTAL_URL = process.env.NEXT_PUBLIC_PADDLE_PORTAL_URL ?? "";
+
 /** True when both public values are set, so the checkout can open at all. */
 export const PADDLE_CONFIGURED = Boolean(PADDLE_ENV && PADDLE_CLIENT_TOKEN && PLUS_PRICE_ID);
 

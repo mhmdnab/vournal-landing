@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { UpgradeCheckout } from "@/components/UpgradeCheckout";
+import { PADDLE_PORTAL_URL } from "@/lib/paddle";
 
 export const metadata: Metadata = {
   title: "Pricing — vournal",
@@ -53,12 +54,25 @@ export default function PricingPage() {
 
         <div className="mx-auto mt-12 max-w-sm">
           <UpgradeCheckout />
+          {PADDLE_PORTAL_URL && (
+            <p className="text-secondary mt-6 text-sm leading-relaxed">
+              Already subscribed? Don’t buy again. Update your card, get invoices or cancel in{" "}
+              <a href={PADDLE_PORTAL_URL} className="underline">
+                the customer portal
+              </a>
+              .
+            </p>
+          )}
           <p className="text-muted mt-6 text-xs leading-relaxed">
             Billed monthly by Paddle, our reseller and merchant of record. Plus renews
             automatically each month until you cancel; it stays active until the end of the
             period you paid for. Use the email you sign in to vournal with. See the{" "}
             <Link href="/terms" className="underline">
               Terms
+            </Link>
+            ,{" "}
+            <Link href="/refunds" className="underline">
+              Refund Policy
             </Link>{" "}
             and{" "}
             <Link href="/privacy" className="underline">

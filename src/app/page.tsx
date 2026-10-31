@@ -333,7 +333,7 @@ function Faq() {
     },
     {
       q: "How much does it cost?",
-      a: "Free during the TestFlight beta. Pricing comes later; beta testers will hear first.",
+      a: "Free to start. Plus is $4.99 a month for longer recordings and more entries.",
     },
     {
       q: "Is there an Android or web version?",
