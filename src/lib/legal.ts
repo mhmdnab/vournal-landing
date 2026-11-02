@@ -216,7 +216,7 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "29 October 2026",
+  updated: "2 November 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, operated by Mohamad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
@@ -297,7 +297,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     {
       ul: [
         [{ b: "Who the agreement is with." }, " These terms are between you and us only, not Apple. We, not Apple, are solely responsible for vournal and its content."],
-        [{ b: "Your licence." }, " We grant you a non-transferable licence to use vournal on Apple devices that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions."],
+        [{ b: "Your licence." }, " We grant you a non-transferable licence to use vournal on Apple devices that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions, except that vournal may also be used by other accounts associated with the purchaser through Family Sharing or volume purchasing."],
         [{ b: "Maintenance and support." }, " We are solely responsible for maintaining and supporting vournal. Apple has no obligation to provide any maintenance or support for it."],
         [{ b: "Warranty." }, " To the extent any warranty applies and vournal fails to conform to it, you may notify Apple, and Apple will refund the purchase price, if any, that you paid for the app. To the maximum extent permitted by law, Apple has no other warranty obligation for vournal."],
         [{ b: "Claims." }, " We, not Apple, are responsible for addressing any claims by you or a third party relating to vournal or your use of it, including product-liability claims, claims that vournal fails to meet a legal or regulatory requirement, and claims under consumer-protection, privacy, or similar law."],
