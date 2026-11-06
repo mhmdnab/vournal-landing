@@ -39,7 +39,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "31 October 2026",
+  updated: "6 November 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -145,6 +145,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     { p: [{ b: "This means your voice recordings and journal text leave your device." }, " They are transmitted over encrypted connections and processed to produce your transcript and its structure."] },
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
     { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
+    { p: [{ b: "AI actions (vournal Plus)." }, " If you have vournal Plus and turn on AI actions, the app can act on what you say: log spending, check off habits, add gifts, update projects and goals, and similar changes. To propose them, we send Anthropic your entry text together with the parts of your vournal data needed for it (such as your money, health and food, people, habits, projects, goals and tasks). Every proposed change waits on a review card, and nothing changes until you tap Save. The app asks for your permission before AI actions first run. You can turn AI actions off at any time in Profile or on life.vournal.app; it is the same setting as AI on life.vournal.app."] },
 
     { h: "4. Sensitive content" },
     { p: ["A voice journal is unusually personal, and two categories deserve specific mention:"] },
