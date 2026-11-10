@@ -269,7 +269,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
         [{ b: "In the app:" }, " vournal Plus is sold through Apple In-App Purchase and charged to your Apple Account when you confirm. It renews automatically each month unless you cancel at least 24 hours before the end of the current period; your account is charged for the next month within 24 hours before it ends. You can manage or cancel it in your Apple Account settings. Refunds are handled by Apple under Apple's terms."],
         ["When you cancel, Plus stays active until the end of the period you paid for, then your account returns to the free limits. Nothing in your journal is deleted."],
         ["If we change the price, we will tell you before the new price applies, and you can cancel before it does."],
-        ["New accounts get vournal Plus free for two months, once per person. Nothing is charged when the free months end; you choose whether to subscribe."],
+        ["When we offer them, new accounts get vournal Plus free for two months, once per person. Nothing is charged when the free months end; you choose whether to subscribe. Subscribing during the free months starts your paid subscription that day, and the free months end then."],
       ],
     },
     { webOnly: [{ ul: [[{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the Paddle customer portal or the receipt and account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."]] }] },
