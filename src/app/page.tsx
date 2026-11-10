@@ -302,24 +302,24 @@ function OnTheWeb() {
     <section className="border-hairline border-t">
       <div className="mx-auto grid w-full max-w-5xl grid-cols-1 items-center gap-12 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-muted text-xs tracking-[0.14em] uppercase">vournal OS</p>
+          <p className="text-muted text-xs tracking-[0.14em] uppercase">vournal life</p>
           <h2 className="font-serif text-ink mt-4 text-3xl tracking-tight">
             Your whole life, on the big screen.
           </h2>
           <p className="text-secondary mt-4 max-w-md text-[15px] leading-relaxed">
-            Everything you say in the app lands in vournal OS on the web: your day,
+            Everything you say in the app lands in vournal life on the web: your day,
             tasks, projects, calendar, money and habits, laid out on one calm
             dashboard. Same account, always in sync.
           </p>
           <Link
-            href="/os"
+            href="/life"
             className="text-ink mt-6 inline-flex items-center gap-1.5 text-sm font-medium underline underline-offset-4 hover:text-accent"
           >
-            See vournal OS <span aria-hidden>→</span>
+            See vournal life <span aria-hidden>→</span>
           </Link>
         </div>
-        <Link href="/os" className="block" aria-label="See vournal OS">
-          <BrowserShot src="/os/dashboard.jpg" alt="vournal OS on the web: the day at a glance, what you can spend today, and your top 3 priorities" priority={false} />
+        <Link href="/life" className="block" aria-label="See vournal life">
+          <BrowserShot src="/life/dashboard.jpg" alt="vournal life on the web: the day at a glance, what you can spend today, and your top 3 priorities" priority={false} />
         </Link>
       </div>
     </section>
@@ -367,11 +367,11 @@ function Faq() {
     },
     {
       q: "How much does it cost?",
-      a: "vournal is free to download on the App Store. vournal Plus, a monthly subscription in the app, raises the recording limits and unlocks vournal OS on the web.",
+      a: "vournal is free to download on the App Store. vournal Plus, a monthly subscription in the app or on the web, raises the recording limits and unlocks vournal life.",
     },
     {
       q: "Is there an Android or web version?",
-      a: "The app is on iPhone. On the web there’s vournal OS: your tasks, calendar, projects, money and habits on a big screen, with the same account. It’s part of vournal Plus.",
+      a: "The app is on iPhone. On the web there’s vournal life: your tasks, calendar, projects, money and habits on a big screen, with the same account. It’s part of vournal Plus.",
     },
   ];
   return (

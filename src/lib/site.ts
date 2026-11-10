@@ -11,11 +11,11 @@ export const APP_STORE_URL = "https://apps.apple.com/us/app/vournal-voice-diary/
 /** Shown on every download button. */
 export const CTA_LABEL = "Download on the App Store";
 
-/** vournal OS, the web dashboard (part of vournal Plus). */
+/** vournal life, the web dashboard (part of vournal Plus). */
 export const WEB_APP_URL = "https://life.vournal.app";
 
 /** Footer + FAQ contact. */
 export const CONTACT_EMAIL = "hello@vournal.app"; // TODO: confirm address
 
-/** Create an account and use vournal OS on the web (the dashboard's sign-up). */
+/** Create an account and use vournal life on the web (the dashboard's sign-up). */
 export const WEB_SIGNUP_URL = "https://life.vournal.app/signup";

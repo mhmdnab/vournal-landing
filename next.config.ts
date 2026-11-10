@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  // The web dashboard's page was /os before it was named vournal life.
+  async redirects() {
+    return [{ source: "/os", destination: "/life", permanent: true }];
+  },
 };
 
 export default nextConfig;

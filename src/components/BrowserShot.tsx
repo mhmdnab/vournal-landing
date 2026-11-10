@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-/** A screenshot in a simple browser frame (shared with /os). */
+/** A screenshot in a simple browser frame (shared with /life). */
 export function BrowserShot({ src, alt, priority = false }: { src: string; alt: string; priority?: boolean }) {
   return (
     <div className="border-hairline overflow-hidden rounded-xl border bg-white shadow-[0_24px_60px_-28px_rgba(40,36,28,0.35)]">

@@ -14,10 +14,10 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <Link
-            href="/os"
+            href="/life"
             className="text-secondary hover:text-ink transition-colors"
           >
-            vournal OS
+            vournal life
           </Link>
           <Link
             href="/privacy"
