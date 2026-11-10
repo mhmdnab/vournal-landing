@@ -5,12 +5,14 @@
 /** The marketing domain — used for absolute Open Graph / canonical URLs. */
 export const SITE_URL = "https://vournal.app";
 
-/** Where every download button goes. The public TestFlight invitation for now;
- *  swap in the App Store link at launch. */
-export const APP_STORE_URL = "https://testflight.apple.com/join/Uff1cmGA";
+/** Where every download button goes: vournal on the App Store (live 2026-11-10). */
+export const APP_STORE_URL = "https://apps.apple.com/us/app/vournal-voice-diary/id6818284333";
 
-/** Shown on every download button. Flip to "Download on the App Store" at launch. */
-export const CTA_LABEL = "Join the TestFlight beta";
+/** Shown on every download button. */
+export const CTA_LABEL = "Download on the App Store";
+
+/** vournal OS, the web dashboard (part of vournal Plus). */
+export const WEB_APP_URL = "https://life.vournal.app";
 
 /** Footer + FAQ contact. */
 export const CONTACT_EMAIL = "hello@vournal.app"; // TODO: confirm address

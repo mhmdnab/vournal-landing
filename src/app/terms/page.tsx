@@ -5,7 +5,7 @@ import { TERMS_OF_SERVICE, forWeb } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Terms of Service — vournal",
-  description: "The terms for using vournal, including the TestFlight beta.",
+  description: "The terms for using vournal and vournal Plus.",
 };
 
 export default function TermsPage() {

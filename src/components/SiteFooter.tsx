@@ -14,6 +14,12 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <Link
+            href="/os"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            vournal OS
+          </Link>
+          <Link
             href="/privacy"
             className="text-secondary hover:text-ink transition-colors"
           >
@@ -41,7 +47,7 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto w-full max-w-5xl px-6 pb-10">
         <p className="text-faint text-xs">
-          {new Date().getFullYear()} vournal. iOS. Made for the way you talk.
+          {new Date().getFullYear()} vournal. On the iPhone and the web. Made for the way you talk.
         </p>
       </div>
     </footer>
