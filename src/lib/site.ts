@@ -16,3 +16,6 @@ export const WEB_APP_URL = "https://life.vournal.app";
 
 /** Footer + FAQ contact. */
 export const CONTACT_EMAIL = "hello@vournal.app"; // TODO: confirm address
+
+/** Create an account and use vournal OS on the web (the dashboard's sign-up). */
+export const WEB_SIGNUP_URL = "https://life.vournal.app/signup";

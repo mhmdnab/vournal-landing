@@ -39,7 +39,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "6 November 2026",
+  updated: "10 November 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -90,7 +90,7 @@ export const PRIVACY_POLICY: LegalDoc = {
       ul: [
         ["Your plan and the date it renews or ends"],
         ["The identifiers that link a purchase to your account, such as Apple's original transaction id"],
-        ["We never receive your card or bank details. Apple handles payment."],
+        ["We never receive your card or bank details. The store you buy from handles payment."],
       ],
     },
     { p: [{ b: "Technical information" }] },
@@ -142,6 +142,7 @@ export const PRIVACY_POLICY: LegalDoc = {
       },
     },
     { p: [{ b: "Payments." }, " If you subscribe in the app, Apple sells the subscription and processes payment under Apple's terms; Apple tells us the purchase's transaction details so we can turn Plus on, renew it and end it. Apple acts under its own privacy policy."] },
+    { webOnly: [{ p: ["If you subscribe on our website, Paddle (paddle.com) is the reseller and merchant of record: it receives your email address and the payment details you enter at checkout, and tells us the subscription's status, including Paddle's subscription id, which we keep. Paddle acts under its own privacy policy."] }] },
     { p: [{ b: "This means your voice recordings and journal text leave your device." }, " They are transmitted over encrypted connections and processed to produce your transcript and its structure."] },
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
     { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
@@ -183,6 +184,7 @@ export const PRIVACY_POLICY: LegalDoc = {
         [{ b: "Unlink a contact" }, " — removes the link from your device. Your contact itself is never changed."],
       ],
     },
+    { p: [{ b: "Free months of Plus." }, " When an account gets its free months of Plus, we keep a one-way code made from its email address and sign-in identities, even after the account is deleted, so the free months are given once per person. The code can't be turned back into the address."] },
     { p: ["Deletions are actioned promptly. Copies may persist briefly in encrypted backups before being overwritten in the ordinary course of operations. Transient copies held by processors are deleted according to their retention practices."] },
 
     { h: "8. Security" },
@@ -217,7 +219,7 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "2 November 2026",
+  updated: "10 November 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, operated by Mohamad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
@@ -267,8 +269,10 @@ export const TERMS_OF_SERVICE: LegalDoc = {
         [{ b: "In the app:" }, " vournal Plus is sold through Apple In-App Purchase and charged to your Apple Account when you confirm. It renews automatically each month unless you cancel at least 24 hours before the end of the current period; your account is charged for the next month within 24 hours before it ends. You can manage or cancel it in your Apple Account settings. Refunds are handled by Apple under Apple's terms."],
         ["When you cancel, Plus stays active until the end of the period you paid for, then your account returns to the free limits. Nothing in your journal is deleted."],
         ["If we change the price, we will tell you before the new price applies, and you can cancel before it does."],
+        ["New accounts get vournal Plus free for two months, once per person. Nothing is charged when the free months end; you choose whether to subscribe."],
       ],
     },
+    { webOnly: [{ ul: [[{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the Paddle customer portal or the receipt and account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."]] }] },
 
     { h: "9. Availability and changes" },
     { p: ["We aim to keep vournal running well, but we do not guarantee uninterrupted or error-free service. We may change, suspend, or discontinue features. If we plan to discontinue the service entirely, we will give you reasonable notice and an opportunity to export your data."] },
