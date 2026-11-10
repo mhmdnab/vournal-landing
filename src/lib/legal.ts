@@ -184,7 +184,7 @@ export const PRIVACY_POLICY: LegalDoc = {
         [{ b: "Unlink a contact" }, " — removes the link from your device. Your contact itself is never changed."],
       ],
     },
-    { p: [{ b: "Free months of Plus." }, " When an account gets its free months of Plus, we keep a one-way code made from its email address and sign-in identities, even after the account is deleted, so the free months are given once per person. The code can't be turned back into the address."] },
+    { p: [{ b: "Free month of Plus." }, " When an account gets its free month of Plus, we keep a one-way code made from its email address and sign-in identities, even after the account is deleted, so the free month is given once per person. The code can't be turned back into the address."] },
     { p: ["Deletions are actioned promptly. Copies may persist briefly in encrypted backups before being overwritten in the ordinary course of operations. Transient copies held by processors are deleted according to their retention practices."] },
 
     { h: "8. Security" },
@@ -269,7 +269,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
         [{ b: "In the app:" }, " vournal Plus is sold through Apple In-App Purchase and charged to your Apple Account when you confirm. It renews automatically each month unless you cancel at least 24 hours before the end of the current period; your account is charged for the next month within 24 hours before it ends. You can manage or cancel it in your Apple Account settings. Refunds are handled by Apple under Apple's terms."],
         ["When you cancel, Plus stays active until the end of the period you paid for, then your account returns to the free limits. Nothing in your journal is deleted."],
         ["If we change the price, we will tell you before the new price applies, and you can cancel before it does."],
-        ["When we offer them, new accounts get vournal Plus free for two months, once per person. Nothing is charged when the free months end; you choose whether to subscribe. Subscribing during the free months starts your paid subscription that day, and the free months end then."],
+        ["When we offer it, new accounts get vournal Plus free for one month, once per person. Nothing is charged when the free month ends; you choose whether to subscribe. Subscribing during the free month starts your paid subscription that day, and the free month ends then."],
       ],
     },
     { webOnly: [{ ul: [[{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the Paddle customer portal or the receipt and account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."]] }] },
