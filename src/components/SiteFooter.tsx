@@ -20,6 +20,12 @@ export function SiteFooter() {
             vournal life
           </Link>
           <Link
+            href="/pricing"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
             href="/privacy"
             className="text-secondary hover:text-ink transition-colors"
           >
@@ -30,6 +36,12 @@ export function SiteFooter() {
             className="text-secondary hover:text-ink transition-colors"
           >
             Terms
+          </Link>
+          <Link
+            href="/refunds"
+            className="text-secondary hover:text-ink transition-colors"
+          >
+            Refunds
           </Link>
           <Link
             href="/support"
@@ -48,6 +60,9 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-5xl px-6 pb-10">
         <p className="text-faint text-xs">
           {new Date().getFullYear()} vournal. On the iPhone and the web. Made for the way you talk.
+        </p>
+        <p className="text-faint mt-1 text-xs">
+          Operated by Mohamad El Naboulsi, Tripoli, Lebanon. Web purchases are sold by Paddle, our reseller and merchant of record.
         </p>
       </div>
     </footer>

@@ -12,6 +12,9 @@ export function SiteHeader() {
         <Link href="/life" className="text-secondary hover:text-ink text-xs whitespace-nowrap transition-colors sm:text-sm">
           vournal life
         </Link>
+        <Link href="/pricing" className="text-secondary hover:text-ink text-xs whitespace-nowrap transition-colors sm:text-sm">
+          Pricing
+        </Link>
         <DownloadButton variant="outline" className="text-xs" compact />
       </div>
     </header>

@@ -29,6 +29,7 @@ export default function LandingPage() {
         <HowItWorks />
         <OnTheWeb />
         <ScreenshotBand />
+        <Pricing />
         <Faq />
         <BottomCta />
       </main>
@@ -347,6 +348,34 @@ function ScreenshotBand() {
 
 /* ----------------------------------------------------------------- FAQ ---- */
 
+function Pricing() {
+  return (
+    <section className="border-hairline border-t" id="pricing">
+      <div className="mx-auto w-full max-w-5xl px-6 py-20">
+        <h2 className="font-serif text-ink text-3xl tracking-tight">Pricing</h2>
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="border-hairline rounded-2xl border p-6">
+            <p className="font-serif text-ink text-xl">Free</p>
+            <p className="text-secondary mt-2 text-[15px] leading-relaxed">40 entries a month, recordings up to 1.5 minutes. Journal, to-dos, calendar and insights.</p>
+          </div>
+          <div className="border-accent rounded-2xl border-2 p-6">
+            <p className="font-serif text-ink text-xl">
+              vournal Plus <span className="text-ink">· $9.99 a month</span>
+            </p>
+            <p className="text-accent mt-1 text-sm font-medium">First month free for new subscribers</p>
+            <p className="text-secondary mt-2 text-[15px] leading-relaxed">
+              150 entries a month, recordings up to 5 minutes, AI that acts on what you say, and vournal life on the web.
+            </p>
+          </div>
+        </div>
+        <Link href="/pricing" className="text-ink mt-6 inline-flex items-center gap-1.5 text-sm font-medium underline underline-offset-4 hover:text-accent">
+          Pricing, cancelling and refunds <span aria-hidden>→</span>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 function Faq() {
   const qs = [
     {
@@ -367,7 +396,7 @@ function Faq() {
     },
     {
       q: "How much does it cost?",
-      a: "vournal is free to download on the App Store. vournal Plus, a monthly subscription in the app or on the web, raises the recording limits and unlocks vournal life.",
+      a: "vournal is free. vournal Plus is $9.99 a month, with the first month free for new subscribers: 150 entries a month, recordings up to 5 minutes, AI that acts on what you say, and vournal life on the web. Subscribe in the iPhone app or at life.vournal.app; cancel any time. See Pricing for the details.",
     },
     {
       q: "Is there an Android or web version?",
