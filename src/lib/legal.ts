@@ -39,12 +39,12 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "10 November 2026",
+  updated: "15 November 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
       p: [
-        'vournal ("we", "us") is operated by Mohamad El Naboulsi, based in Tripoli, Lebanon. Contact: ',
+        'vournal ("we", "us"), including the vournal app and vournal life at life.vournal.app, is operated by Mohamad El Naboulsi, a sole proprietor based in Tripoli, Lebanon, who is the data controller for your personal data. Contact: ',
         { b: EMAIL },
         ".",
       ],
@@ -85,6 +85,14 @@ export const PRIVACY_POLICY: LegalDoc = {
         ["Information automatically derived from your entries, including: a short summary, an estimated mood rating and mood-related words, tasks and their dates and times, recurring topics, places, and names of people you mention"],
       ],
     },
+    { p: [{ b: "What you add on vournal life (vournal Plus)" }] },
+    {
+      ul: [
+        ["Tasks, projects, reminders and calendar events"],
+        ["Money you track: accounts, transactions, budgets, bills and subscriptions"],
+        ["Habits, goals, health and meal logs, people, notes, documents, shopping lists, and travel, study and work plans"],
+      ],
+    },
     { p: [{ b: "Purchases (if you subscribe to vournal Plus)" }] },
     {
       ul: [
@@ -95,7 +103,10 @@ export const PRIVACY_POLICY: LegalDoc = {
     },
     { p: [{ b: "Technical information" }] },
     {
-      ul: [["Basic operational logs needed to run and secure the service (for example, request timestamps and error records)"]],
+      ul: [
+        ["Basic operational logs needed to run and secure the service (for example, request timestamps and error records)"],
+        ["Cookies: our websites use only essential cookies, to keep you signed in to vournal life and to remember your language. We use no advertising or analytics cookies."],
+      ],
     },
     { p: [{ b: "Contacts on your device (optional)" }] },
     { p: ["You can link a person in your journal to a contact on your phone. If you choose to, the app asks for access to your contacts and reads the name, phone numbers, and email addresses of the contact you pick, so it can show them to you."] },
@@ -175,6 +186,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     },
 
     { h: "7. Retention and deletion" },
+    { p: ["We keep your data for as long as your account is open, so the service can work for you, and delete it when you delete it or close your account, as described below."] },
     {
       ul: [
         [{ b: "Delete a recording" }, " — removes the audio file while keeping the written entry."],
@@ -219,13 +231,14 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "10 November 2026",
+  updated: "15 November 2026",
   blocks: [
-    { p: ['These terms govern your use of vournal, operated by Mohamad El Naboulsi ("we", "us"). By creating an account or using the app, you agree to them. If you do not agree, please do not use vournal.'] },
+    { p: ['These terms govern your use of vournal, including the vournal app and vournal life at life.vournal.app. vournal is operated by Mohamad El Naboulsi, a sole proprietor based in Tripoli, Lebanon ("we", "us"), and these terms are an agreement between you and us. By creating an account or using vournal, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
 
     { h: "1. What vournal is" },
     { p: ["vournal is a voice journal. You speak; the app records you, converts your speech to text, and automatically organises it into a journal entry, tasks, and calendar items, along with an estimated mood and the topics, places, and people that recur. You can optionally link a person in your journal to a contact on your phone, have vournal copy your tasks and appointments into Apple Reminders and Apple Calendar, and share an entry to other apps."] },
+    { p: ["vournal life (life.vournal.app) is vournal on the web: a dashboard for your tasks, projects, calendar, money, habits, goals, health, notes and more, kept in sync with the app. vournal life is part of vournal Plus."] },
     { p: ["How your data is handled is described in our Privacy Policy, which forms part of these terms."] },
 
     { h: "2. Eligibility" },
@@ -237,12 +250,14 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     { h: "4. Your content belongs to you" },
     { p: ["You retain all rights to your recordings, transcripts, and entries. We claim no ownership of them."] },
     { p: ["You grant us a limited licence to store, transmit, and process your content ", { b: "solely to operate the service for you" }, " — including sending it to the providers listed in the Privacy Policy for transcription and organisation. This licence exists only so the app can function, ends when you delete the content or your account, and does not permit us to publish your content, sell it, or use it for advertising."] },
+    { p: ["vournal itself, meaning the apps, the websites, their design and the software behind them, belongs to us and our licensors. These terms let you use vournal; they don't give you any other rights in it."] },
 
     { h: "5. Accuracy — please read" },
     { p: [{ b: "Automated transcription and organisation are imperfect, and vournal may get things wrong." }] },
     { p: ["Specifically, the app may mishear words, transcribe the wrong thing, assign the wrong date or time to a task, miss a task you mentioned, or create one you did not intend. This is more likely with background noise, accents, dialects, and speech that mixes languages."] },
     { p: [{ b: "Do not rely on vournal as your only record of anything important." }, " It is a journaling aid, not a system of record. You are responsible for verifying anything that matters — appointments, deadlines, medication schedules, commitments to other people. We are not liable for anything missed, mistimed, or misrecorded."] },
     { p: ["If you turn on copying to Apple Reminders or Apple Calendar, the copies reflect what vournal extracted, with the same possibility of error, and they follow changes made in vournal, not the other way round. Check them as you would check vournal itself."] },
+    { p: [{ b: "AI features." }, " vournal uses AI to transcribe and organise your entries, to suggest changes through AI actions, and to answer you in the vournal life assistant. AI output can be wrong, incomplete or out of date. You are responsible for what you ask it and for checking its output before you rely on it. What it produces for you is yours to use. It is not professional advice: do not treat it as medical, legal, financial or tax advice, and ask a qualified person for anything that matters. We may limit or remove use of the AI features that breaks these terms."] },
 
     { h: "6. Mood features are not health care" },
     { p: ["vournal estimates a mood rating and emotion words from your entries and shows trends over time. These are automated impressions of your own words, offered for personal reflection."] },
@@ -254,6 +269,8 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     {
       ul: [
         ["use vournal for anything unlawful, or to record anyone in a way that breaks the law where you are"],
+        ["use vournal for fraud or spam, or to infringe anyone's intellectual property"],
+        ["use the AI features to create unlawful, harmful or abusive content"],
         ["upload content you have no right to record or share"],
         ["attempt to access another user's account or data"],
         ["probe, disrupt, overload, or reverse-engineer the service, or bypass its security or usage limits"],
@@ -272,7 +289,16 @@ export const TERMS_OF_SERVICE: LegalDoc = {
         [{ b: "Free trial:" }, " vournal Plus may start with a free trial, which you can get once. The trial's length and the price after it are shown before you confirm. Nothing is charged during the trial. Unless you cancel at least 24 hours before it ends, your subscription starts when the trial ends and you are charged the price shown, then every month after. If you cancel during the trial, Plus stays on until the trial ends."],
       ],
     },
-    { webOnly: [{ ul: [[{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller and merchant of record, under Paddle's terms. It renews automatically each month until you cancel; you can cancel at any time from the Paddle customer portal or the receipt and account emails Paddle sends. Refund requests go to Paddle and are handled under its refund policy and applicable law."]] }] },
+    {
+      webOnly: [
+        {
+          ul: [
+            [{ b: "On our website:" }, " vournal Plus is sold by Paddle (paddle.com), our reseller. Paddle.com is the Merchant of Record for all our orders. Paddle handles payment, taxes and receipts under its buyer terms. Plus costs the monthly price shown before you buy, in USD, and renews automatically each month until you cancel. You can cancel at any time from the link in Paddle's receipt and account emails or at paddle.net."],
+            [{ b: "Refunds on the website:" }, " you can ask for a full refund of any web payment within 14 days of that payment, at paddle.net or by writing to ", { b: EMAIL }, ". Our Refund Policy at vournal.app/refunds has the details."],
+          ],
+        },
+      ],
+    },
 
     { h: "9. Availability and changes" },
     { p: ["We aim to keep vournal running well, but we do not guarantee uninterrupted or error-free service. We may change, suspend, or discontinue features. If we plan to discontinue the service entirely, we will give you reasonable notice and an opportunity to export your data."] },

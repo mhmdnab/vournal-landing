@@ -16,7 +16,7 @@ export default function RefundsPage() {
   const p = "text-secondary mt-3 text-[15px] leading-relaxed";
   const h = "font-serif text-ink mt-10 text-xl";
   return (
-    <LegalLayout title="Refund policy" updated="14 November 2026">
+    <LegalLayout title="Refund policy" updated="15 November 2026">
       <p className={p}>
         This policy covers vournal Plus, the monthly subscription. vournal itself is free. It applies alongside our{" "}
         <Link href="/terms" className="underline underline-offset-4">
