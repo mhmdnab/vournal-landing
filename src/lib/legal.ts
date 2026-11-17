@@ -39,7 +39,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "15 November 2026",
+  updated: "17 November 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -105,7 +105,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     {
       ul: [
         ["Basic operational logs needed to run and secure the service (for example, request timestamps and error records)"],
-        ["Cookies: our websites use only essential cookies, to keep you signed in to vournal life and to remember your language. We use no advertising or analytics cookies."],
+        ["Cookies: vournal.app and vournal life use only essential cookies, to keep you signed in to vournal life and to remember your language. We use no advertising or analytics cookies."],
       ],
     },
     { p: [{ b: "Contacts on your device (optional)" }] },
@@ -158,6 +158,7 @@ export const PRIVACY_POLICY: LegalDoc = {
     { p: ["We select providers that do not use customer data submitted through their APIs to train their models. Provider terms can change; the list above reflects our current providers and we will update it when it changes."] },
     { p: [{ b: "Your permission." }, " Speechmatics and Anthropic are AI services. Before the app first sends them a recording or an entry, it shows you who receives what and asks for your permission. Nothing is sent to them unless you allow it. You can withdraw your permission at any time in Profile. The app then stops sending new recordings and entries, and you will not be able to create new entries until you allow it again. Entries already in your journal are not affected."] },
     { p: [{ b: "AI actions (vournal Plus)." }, " If you have vournal Plus and turn on AI actions, the app can act on what you say: log spending, check off habits, add gifts, update projects and goals, and similar changes. To propose them, we send Anthropic your entry text together with the parts of your vournal data needed for it (such as your money, health and food, people, habits, projects, goals and tasks). Every proposed change waits on a review card, and nothing changes until you tap Save. The app asks for your permission before AI actions first run. You can turn AI actions off at any time in Profile or on life.vournal.app; it is the same setting as AI on life.vournal.app."] },
+    { p: [{ b: "The assistant and your journal (vournal Plus)." }, " If you allow it, the vournal assistant, in the app and on life.vournal.app, can read your journal entries to answer your questions, for example how your week went or how often you mentioned feeling tired. The app and the website ask for this permission the first time you chat. To write a reply, we send Anthropic your message together with only the entries it needs for that reply and the parts of your vournal data your question is about. The assistant can read your journal but never changes it, and any other change it suggests waits for your approval in the app. You can stop this at any time by turning AI off in Profile or on life.vournal.app."] },
 
     { h: "4. Sensitive content" },
     { p: ["A voice journal is unusually personal, and two categories deserve specific mention:"] },
@@ -231,7 +232,7 @@ export const PRIVACY_POLICY: LegalDoc = {
 
 export const TERMS_OF_SERVICE: LegalDoc = {
   title: "Terms of Service",
-  updated: "15 November 2026",
+  updated: "17 November 2026",
   blocks: [
     { p: ['These terms govern your use of vournal, including the vournal app and vournal life at life.vournal.app. vournal is operated by Mohamad El Naboulsi, a sole proprietor based in Tripoli, Lebanon ("we", "us"), and these terms are an agreement between you and us. By creating an account or using vournal, you agree to them. If you do not agree, please do not use vournal.'] },
     { hr: true },
@@ -257,7 +258,7 @@ export const TERMS_OF_SERVICE: LegalDoc = {
     { p: ["Specifically, the app may mishear words, transcribe the wrong thing, assign the wrong date or time to a task, miss a task you mentioned, or create one you did not intend. This is more likely with background noise, accents, dialects, and speech that mixes languages."] },
     { p: [{ b: "Do not rely on vournal as your only record of anything important." }, " It is a journaling aid, not a system of record. You are responsible for verifying anything that matters — appointments, deadlines, medication schedules, commitments to other people. We are not liable for anything missed, mistimed, or misrecorded."] },
     { p: ["If you turn on copying to Apple Reminders or Apple Calendar, the copies reflect what vournal extracted, with the same possibility of error, and they follow changes made in vournal, not the other way round. Check them as you would check vournal itself."] },
-    { p: [{ b: "AI features." }, " vournal uses AI to transcribe and organise your entries, to suggest changes through AI actions, and to answer you in the vournal life assistant. AI output can be wrong, incomplete or out of date. You are responsible for what you ask it and for checking its output before you rely on it. What it produces for you is yours to use. It is not professional advice: do not treat it as medical, legal, financial or tax advice, and ask a qualified person for anything that matters. We may limit or remove use of the AI features that breaks these terms."] },
+    { p: [{ b: "AI features." }, " vournal uses AI to transcribe and organise your entries, to suggest changes through AI actions, and to answer you when you ask vournal in the app or in the vournal life assistant. AI output can be wrong, incomplete or out of date. You are responsible for what you ask it and for checking its output before you rely on it. What it produces for you is yours to use. It is not professional advice: do not treat it as medical, legal, financial or tax advice, and ask a qualified person for anything that matters. We may limit or remove use of the AI features that breaks these terms."] },
 
     { h: "6. Mood features are not health care" },
     { p: ["vournal estimates a mood rating and emotion words from your entries and shows trends over time. These are automated impressions of your own words, offered for personal reflection."] },
