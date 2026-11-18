@@ -39,7 +39,7 @@ const EMAIL = "hello@vournal.app";
 
 export const PRIVACY_POLICY: LegalDoc = {
   title: "Privacy Policy",
-  updated: "17 November 2026",
+  updated: "18 November 2026",
   blocks: [
     { p: ["This policy explains what vournal collects, how it is used, and who else processes it."] },
     {
@@ -129,11 +129,13 @@ export const PRIVACY_POLICY: LegalDoc = {
     { p: ["If you sign in with Apple or Google, they confirm who you are to us. We receive your email address (or Apple's private relay address, if you choose to hide yours) and an account identifier, never your Apple or Google password. The token they send us can also include your name and profile picture; we don't keep those. Apple and Google act under their own privacy policies."] },
     { ul: [["For Sign in with Apple, we keep a token, encrypted, only so we can revoke vournal's access when you delete your account."]] },
     { p: [{ b: "Alerts on your device (optional)" }] },
-    { p: ["If you turn on alerts, vournal schedules them on your device for when a task is due. An alert shows the task's text, which can appear on your lock screen."] },
+    { p: ["If you turn on alerts, vournal schedules them on your device for when a task is due. An alert shows the task's text, which can appear on your lock screen. If you turn on daily nudges, vournal also sends you up to three short notifications a day: a plan for your day, a suggestion, and an evening check-in. They can appear on your lock screen too."] },
     {
       ul: [
-        ["Alerts are scheduled on your device. They are not sent through our servers or to any third party."],
-        ["You can hide alert previews in your device settings, and turn alerts off at any time in Profile or in your device settings."],
+        ["To-do alerts are scheduled on your device and are not sent through our servers."],
+        ["Daily nudges (if you turn them on) are sent from our servers through Expo's push service and the Apple Push Notification service. We store a push token for each device you sign in on and remove it when you sign out."],
+        ["For vournal Plus, if you agree, nudges are written by our AI provider (Anthropic) from your vournal life data (task, habit, bill and goal names) and, only if you allowed the assistant to read your journal, short summaries of your recent entries. Nudges never include amounts of money or quotes from your journal."],
+        ["You can hide alert previews in your device settings, turn alerts off at any time in Profile or in your device settings, and turn nudges off in Profile → Notifications."],
       ],
     },
     { p: ["We do not track your location or collect advertising identifiers. If you pin a place to a task, we store the place name and the map coordinates you chose; searching for a place sends your search text from your device to Apple's map service. We do not store your contacts, calendars, or reminders on our servers, and we do not use your device's microphone outside of recordings you explicitly start."] },
