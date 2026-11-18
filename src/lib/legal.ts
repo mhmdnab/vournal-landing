@@ -147,10 +147,11 @@ export const PRIVACY_POLICY: LegalDoc = {
         head: ["Provider", "What is sent", "Purpose"],
         rows: [
           ["Speechmatics (Melia)", "Your audio recording", "Converting speech to text"],
-          ["Anthropic (Claude)", "Your transcript text", "Correcting transcription errors and extracting tasks, mood, topics, places, and people"],
+          ["Anthropic (Claude)", "Your transcript text and, for vournal Plus features you turn on, the parts of your vournal data described below", "Correcting transcription errors and extracting tasks, mood, topics, places, and people; for vournal Plus, AI actions, the assistant's replies and AI-written nudges"],
           ["Render (backend + PostgreSQL database)", "Account data, transcripts, and everything derived from your entries", "Hosting and database storage"],
           ["Cloudflare (R2 storage)", "Your audio recordings", "Storing audio files in a private bucket"],
           ["Resend (email delivery)", "Your email address and the message we send you", "Sending confirmation codes and password-reset emails"],
+          ["Expo (push notifications)", "A push token for each device you sign in on, and the nudge's title and text", "Delivering daily nudges through the Apple Push Notification service"],
         ],
       },
     },
