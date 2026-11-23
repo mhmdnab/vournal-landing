@@ -69,6 +69,7 @@ export default function PricingPage() {
         </div>
 
         <section className="mt-14 max-w-2xl space-y-6 text-[15px] leading-relaxed">
+          {/* web checkout waits on Paddle's verification (owner 2026-11-23): restore the present-tense web wording once it's open */}
           <h2 className="font-serif text-ink text-2xl">How to subscribe</h2>
           <div>
             <h3 className="text-ink font-medium">On iPhone</h3>
@@ -88,26 +89,24 @@ export default function PricingPage() {
               <a href={WEB_APP_URL} className="underline underline-offset-4">
                 life.vournal.app
               </a>
-              , with the same account. Web purchases are sold by Paddle (paddle.com), our reseller and merchant of record, which handles payment, tax and
-              invoices.
-            </p>
-            {/* until Paddle's verification is done (owner 2026-11-23); remove once web checkout is open */}
-            <p className="text-secondary mt-2">
-              Subscribing on the web opens soon. Until then, subscribe in the iPhone app and Plus works on life.vournal.app too.
+              , with the same account. Subscribing on the web opens soon: web purchases will be sold by Paddle (paddle.com), our reseller and merchant of
+              record, which handles payment, tax and invoices. Until then, subscribe in the iPhone app and Plus works on life.vournal.app too.
             </p>
           </div>
           <div>
             <h3 className="text-ink font-medium">The free month</h3>
             <p className="text-secondary mt-1">
-              New subscribers get their first month free. Checkout asks for a payment method; nothing is charged during the free month, and after it
-              Plus is $9.99 a month until you cancel. Cancel before the free month ends and you won&apos;t be charged.
+              New subscribers get their first month free. In the app, you confirm the subscription with Apple; nothing is charged during the free month,
+              and after it Plus is $9.99 a month (Apple shows it in your local currency) until you cancel. Cancel before the free month ends and you
+              won&apos;t be charged.
             </p>
           </div>
           <div>
             <h3 className="text-ink font-medium">Cancelling and refunds</h3>
             <p className="text-secondary mt-1">
-              Cancel any time: in your Apple Account settings for App Store subscriptions, or from Paddle&apos;s customer portal (linked in every receipt)
-              for web subscriptions. Plus stays on until the end of the period you&apos;ve paid for. See the{" "}
+              Cancel any time in your iPhone&apos;s Settings, under your Apple Account&apos;s Subscriptions. Plus stays on until the end of the period
+              you&apos;ve paid for. Once web subscriptions open, they&apos;re cancelled from Paddle&apos;s customer portal, linked in every receipt. See
+              the{" "}
               <Link href="/refunds" className="underline underline-offset-4">
                 refund policy
               </Link>
