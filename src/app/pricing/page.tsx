@@ -77,7 +77,8 @@ export default function PricingPage() {
               <a href={APP_STORE_URL} className="underline underline-offset-4">
                 App Store
               </a>
-              ), through Apple In-App Purchase. Apple charges your Apple Account and shows the price in your local currency.
+              ), through Apple In-App Purchase. Apple charges your Apple Account and shows the price in your local currency. A subscription from the app
+              also unlocks vournal life on the web, with the same account.
             </p>
           </div>
           <div>
@@ -89,6 +90,10 @@ export default function PricingPage() {
               </a>
               , with the same account. Web purchases are sold by Paddle (paddle.com), our reseller and merchant of record, which handles payment, tax and
               invoices.
+            </p>
+            {/* until Paddle's verification is done (owner 2026-11-23); remove once web checkout is open */}
+            <p className="text-secondary mt-2">
+              Subscribing on the web opens soon. Until then, subscribe in the iPhone app and Plus works on life.vournal.app too.
             </p>
           </div>
           <div>
